@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Rwanda - Land of a Thousand Hills</title>
+
+    <style>
+
+        /* =========================
+           GENERAL PAGE SETTINGS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(0, 40, 25, 0.95);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0, 30, 15, 0.45),
+                    rgba(0, 30, 15, 0.65)
+                ),
+                url("https://www.visitrwanda.com/wp-content/uploads/fly-images/16654/Nsanganira-Mother-Ntambara-Group-4H2A3136-1650x1100.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            background: #ffd700;
+            color: #173b2a;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: white;
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #075e3d;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #555;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================== */
+
+        .intro {
+            background: white;
+        }
+
+        .intro-content {
+            max-width: 1000px;
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 19px;
+        }
+
+        .intro-content strong {
+            color: #087f5b;
+        }
+
+
+        /* =========================
+           ATTRACTION CARDS
+        ========================== */
+
+        .attractions {
+            background: #eaf5ef;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: #075e3d;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card-content h4 {
+            color: #c48a00;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card-content p {
+            color: #444;
+        }
+
+
+        /* =========================
+           WHAT'S GREAT ABOUT RWANDA
+        ========================== */
+
+        .great-rwanda {
+            background:
+                linear-gradient(
+                    rgba(0, 80, 50, 0.9),
+                    rgba(0, 60, 40, 0.9)
+                );
+            color: white;
+        }
+
+        .great-rwanda .section-title h2 {
+            color: #ffd700;
+        }
+
+        .great-rwanda .section-title p {
+            color: white;
+        }
+
+        .great-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .great-box {
+            background: rgba(255,255,255,0.12);
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            transition: 0.3s;
+        }
+
+        .great-box:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.04);
+        }
+
+        .great-box .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .great-box h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           TRAVEL SECTION
+        ========================== */
+
+        .travel {
+            background: white;
+        }
+
+        .travel-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .travel-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            margin-bottom: 25px;
+
+            padding: 25px;
+
+            background: #f1f8f4;
+
+            border-left: 6px solid #07875e;
+
+            border-radius: 10px;
+        }
+
+        .travel-icon {
+            font-size: 45px;
+        }
+
+        .travel-item h3 {
+            color: #075e3d;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery {
+            background: #eef7f2;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            transition: 0.4s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #002d1c;
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer h2 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           MOBILE DESIGN
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .travel-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body id="top">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            🇷🇼 Discover Rwanda
+        </div>
+
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#attractions">Attractions</a>
+            </li>
+
+            <li>
+                <a href="#travel">How to Reach</a>
+            </li>
+
+            <li>
+                <a href="#great">Why Rwanda?</a>
+            </li>
+
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Discover Rwanda
+            </h1>
+
+            <p>
+                Welcome to the Land of a Thousand Hills —
+                a country of incredible wildlife, beautiful
+                landscapes, culture and unforgettable adventures.
+            </p>
+
+            <a href="#attractions" class="hero-button">
+                Explore Rwanda
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="section-title">
+
+            <h2>Welcome to Rwanda</h2>
+
+            <p>
+                A small country with extraordinary experiences
+            </p>
+
+        </div>
+
+
+        <div class="intro-content">
+
+            <p>
+                Rwanda is known as the
+                <strong>Land of a Thousand Hills</strong>.
+                It is famous for its beautiful green landscapes,
+                mountain gorillas, national parks, lakes,
+                wildlife and welcoming people.
+            </p>
+
+            <br>
+
+            <p>
+                From the mountains of Volcanoes National Park
+                to the savannah of Akagera and the ancient
+                rainforest of Nyungwe, Rwanda offers many
+                different experiences for visitors.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TOURIST ATTRACTIONS
+    ========================== -->
+
+    <section class="attractions" id="attractions">
+
+        <div class="section-title">
+
+            <h2>Top Tourist Attractions</h2>
+
+            <p>
+                Explore some of the amazing places Rwanda has to offer
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- VOLCANOES -->
+
+            <div class="card">
+
+                <img
+                    src="https://www.visitrwanda.com/wp-content/uploads/fly-images/16654/Nsanganira-Mother-Ntambara-Group-4H2A3136-1650x1100.jpg"
+                    alt="Young mountain gorilla in Rwanda"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        🦍 Volcanoes National Park
+                    </h3>
+
+                    <p>
+                        Located in northwestern Rwanda,
+                        Volcanoes National Park is famous for
+                        mountain gorilla trekking and its
+                        volcanic mountains.
+                    </p>
+
+                    <h4>👀 What can you see?</h4>
+
+                    <p>
+                        Mountain gorillas, golden monkeys,
+                        bamboo forests, birds and beautiful
+                        volcanic mountains.
+                    </p>
+
+                    <h4>🚗 How can you reach it?</h4>
+
+                    <p>
+                        You can travel from Kigali by road
+                        toward Musanze and then continue to
+                        the Volcanoes National Park area.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AKAGERA -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80"
+                    alt="African wildlife safari"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        🦁 Akagera National Park
+                    </h3>
+
+                    <p>
+                        Akagera is Rwanda's savannah safari
+                        destination in the eastern part of
+                        the country.
+                    </p>
+
+                    <h4>👀 What can you see?</h4>
+
+                    <p>
+                        Lions, elephants, buffaloes, rhinos,
+                        giraffes, zebras, hippos, crocodiles
+                        and many bird species.
+                    </p>
+
+                    <h4>🚗 How can you reach it?</h4>
+
+                    <p>
+                        You can travel by road from Kigali
+                        toward the eastern part of Rwanda.
+                        The journey takes several hours depending
+                        on the route and conditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NYUNGWE -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80"
+                    alt="Rainforest"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        🌳 Nyungwe National Park
+                    </h3>
+
+                    <p>
+                        Nyungwe is one of Africa's oldest
+                        rainforests and is famous for its
+                        incredible biodiversity.
+                    </p>
+
+                    <h4>👀 What can you see?</h4>
+
+                    <p>
+                        Chimpanzees, monkeys, colorful birds,
+                        butterflies, orchids and beautiful
+                        rainforest scenery.
+                    </p>
+
+                    <h4>🚗 How can you reach it?</h4>
+
+                    <p>
+                        You can travel from Kigali toward
+                        southwestern Rwanda. Rusizi is one
+                        of the nearby towns used when exploring
+                        the park.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LAKE KIVU -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
+                    alt="Beautiful lake landscape"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        🌊 Lake Kivu
+                    </h3>
+
+                    <p>
+                        Lake Kivu is one of Africa's Great Lakes
+                        and is surrounded by beautiful hills,
+                        beaches and towns.
+                    </p>
+
+                    <h4>👀 What can you see?</h4>
+
+                    <p>
+                        Beautiful lake scenery, islands,
+                        mountains, beaches and spectacular
+                        sunsets.
+                    </p>
+
+                    <h4>🚗 How can you reach it?</h4>
+
+                    <p>
+                        You can travel west from Kigali toward
+                        towns such as Rubavu or Karongi.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KIGALI -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?auto=format&fit=crop&w=1000&q=80"
+                    alt="Kigali city"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        🏙️ Kigali City
+                    </h3>
+
+                    <p>
+                        Kigali is Rwanda's capital city and
+                        an excellent starting point for exploring
+                        the country.
+                    </p>
+
+                    <h4>👀 What can you see?</h4>
+
+                    <p>
+                        Museums, markets, art galleries,
+                        restaurants, modern buildings and
+                        beautiful city views.
+                    </p>
+
+                    <h4>🚗 How can you reach it?</h4>
+
+                    <p>
+                        Kigali is the main entry point for many
+                        international visitors through
+                        Kigali International Airport.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HOW TO REACH RWANDA
+    ========================== -->
+
+    <section class="travel" id="travel">
+
+        <div class="section-title">
+
+            <h2>How Can You Reach Rwanda's Attractions?</h2>
+
+            <p>
+                Rwanda is relatively easy to explore by road.
+            </p>
+
+        </div>
+
+
+        <div class="travel-container">
+
+
+            <div class="travel-item">
+
+                <div class="travel-icon">
+                    ✈️
+                </div>
+
+                <div>
+
+                    <h3>
+                        1. Arrive in Kigali
+                    </h3>
+
+                    <p>
+                        International visitors can arrive through
+                        Kigali International Airport, which provides
+                        access to the country's main tourism circuit.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="travel-item">
+
+                <div class="travel-icon">
+                    🚗
+                </div>
+
+                <div>
+
+                    <h3>
+                        2. Travel by Road
+                    </h3>
+
+                    <p>
+                        Rwanda's major tourist destinations can
+                        be connected by road. Cars, tour vehicles
+                        and other transport options can be used
+                        depending on the destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="travel-item">
+
+                <div class="travel-icon">
+                    🗺️
+                </div>
+
+                <div>
+
+                    <h3>
+                        3. Plan Your Route
+                    </h3>
+
+                    <p>
+                        A popular tourism circuit can include
+                        Kigali, Akagera National Park, Lake Kivu,
+                        Nyungwe National Park and Volcanoes
+                        National Park.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="travel-item">
+
+                <div class="travel-icon">
+                    🧭
+                </div>
+
+                <div>
+
+                    <h3>
+                        4. Use a Guide
+                    </h3>
+
+                    <p>
+                        For activities such as wildlife viewing
+                        and gorilla trekking, visitors should use
+                        authorized guides and follow park rules.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY RWANDA IS GREAT
+    ========================== -->
+
+    <section class="great-rwanda" id="great">
+
+        <div class="section-title">
+
+            <h2>What's Great About Rwanda?</h2>
+
+            <p>
+                Reasons Rwanda is a special tourism destination
+            </p>
+
+        </div>
+
+
+        <div class="great-grid">
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    🦍
+                </div>
+
+                <h3>
+                    Mountain Gorillas
+                </h3>
+
+                <p>
+                    Rwanda offers one of the world's most
+                    remarkable mountain gorilla experiences
+                    in Volcanoes National Park.
+                </p>
+
+            </div>
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    🌄
+                </div>
+
+                <h3>
+                    Thousand Hills
+                </h3>
+
+                <p>
+                    Rwanda's rolling hills and green landscapes
+                    create beautiful scenery throughout the country.
+                </p>
+
+            </div>
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    🐘
+                </div>
+
+                <h3>
+                    Amazing Wildlife
+                </h3>
+
+                <p>
+                    Visitors can experience safari wildlife
+                    in Akagera and primates in Rwanda's forests.
+                </p>
+
+            </div>
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    🌳
+                </div>
+
+                <h3>
+                    Natural Beauty
+                </h3>
+
+                <p>
+                    Rwanda has volcanoes, rainforests,
+                    savannahs, lakes and spectacular countryside.
+                </p>
+
+            </div>
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Warm Hospitality
+                </h3>
+
+                <p>
+                    Rwanda is known for its welcoming people,
+                    culture and community experiences.
+                </p>
+
+            </div>
+
+
+            <div class="great-box">
+
+                <div class="icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Conservation
+                </h3>
+
+                <p>
+                    Tourism plays an important role in supporting
+                    conservation and local communities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="section-title">
+
+            <h2>Rwanda Tourism Gallery</h2>
+
+            <p>
+                A glimpse of Rwanda's natural beauty
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <img
+                src="https://www.visitrwanda.com/wp-content/uploads/fly-images/16654/Nsanganira-Mother-Ntambara-Group-4H2A3136-1650x1100.jpg"
+                alt="Baby gorilla"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80"
+                alt="Wildlife"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80"
+                alt="Forest"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
+                alt="Lake landscape"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?auto=format&fit=crop&w=1000&q=80"
+                alt="City"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h2>🇷🇼 Discover Rwanda</h2>
+
+        <p>
+            Explore. Experience. Remember Rwanda.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Discover Rwanda Tourism
+        </p>
+
+    </footer>
+    </nav> <a href="#top">⬆ Back to Top</a>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO RWANDA</title>
+    <link rel="stylesheet" href="rwanda.css">
+</head> <nav>
+        <a href="rwanda.html">Home</a>
+        <a href="clica.html">Information</a>
+    </nav> 
+<body id="top">
+    
+    <h1> COME TO RWANDA TODAY </h1>
+        <img src="./lions.png" alt="Akagera national park">  
+        <p><u><B>Come visit the land of a thousand hills in the world where one can find infinite treasure beauties</B></u> </p>
+    <p>Rwanda is a country with many varieties of beauties.You can visit and get refreshed and relaxed with that you can say that it has much natural attractions to see.
+        Here in Rwanda there is much to see that can make life long memories.
+    </p><table>
+        <tr>
+        <th>National beauties</th>
+        <th>Location</th>
+        <th>Accomodation facilities </th>
+        <th>Number</th>
+        </tr>
+
+        <tr>
+    <td>Akagera National Park</td>
+    <td>Eastern Province, Kayonza and Nyagatare district
+     <td>Ruzizi tented lodge </td>
+     <td>+250 787 113 300</td>   
+        </tr>
+        <tr>
+        <td>Volcanoes Natoinal park </td>
+        <td>Northern province,Musanze and Nyabihu district</td>
+        <td>Grotta resort </td>
+        <td>+250 796 149 891</td>    
+
+        </tr>
+    </table>
+ <!-- <script>alert("Rwanda a country of a thousand hills");</script> -->
+
+
+
+
+
+
+    <img id="character" src="avater.png">
+
+    <script>
+        let character = document.getElementById("character");
+
+        let position = 2;
+
+        function moveCharacter() {
+            position += 2;
+            character.style.left = position +"px" ;
+
+            requestAnimationFrame(moveCharacter);
+        }
+
+        moveCharacter();
+    </script>
+
+    
+
+  <form style="display: flex;flex-direction: column;background-color:skyblue;background-size: contain;width: fit-content;border-radius: 15px;">
+    <label for="name">enter your name</label>
+    <input type="text" placeholder="your name">
+    <label for="number">enter your phone number</label>
+  <input type ="text"placeholder="your phone number">
+   <label for="email">enter your email</label>
+   <input type="text"placeholder="your email"> 
+  
+     <a href="#top">⬆ Back to Top</a>
+</body>
+</html>
+
+    
+
+
+
+
+
+
+
